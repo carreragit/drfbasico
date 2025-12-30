@@ -1,0 +1,25 @@
+ #This file will define your Django web service, along with the database it connects to. 
+ #Don't forget to commit and push it to your repository.
+
+ databases:
+  - name: drfsimpledb
+    plan: free
+    databaseName: drfsimple
+    user: drfsimple
+
+services:
+  - type: web
+    plan: free
+    name: drfsimple
+    runtime: python
+    buildCommand: './build.sh'
+    startCommand: 'python -m gunicorn drfsimple.asgi:application -k uvicorn.workers.UvicornWorker'
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: drfsimpledb
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 4
