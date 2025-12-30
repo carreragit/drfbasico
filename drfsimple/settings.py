@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'drfsimple.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Replace this value with your local database's connection string.
-        default='postgresql://postgres:postgres@localhost:5432/mysite',
+        default='postgresql://drfsimple:gDKkIqFFJY7KZZ5OwjPMuCMEVDKgWOVS@dpg-d5a53npr0fns7385fkog-a/drfsimple_3mhd',
         conn_max_age=600
     )
 }
