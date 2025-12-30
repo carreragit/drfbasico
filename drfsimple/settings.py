@@ -130,6 +130,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # Directorio donde se recopilarán los archivos estáticos
 
 # This production code might break development mode, so we check whether we're in DEBUG mode
 if not DEBUG:
