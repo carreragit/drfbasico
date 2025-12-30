@@ -28,7 +28,8 @@ SECRET_KEY = 'django-insecure-^-m^g=(5m68ypq+a8^@a_y#y*i1trd@1p_1h(gmbij0y44v#f_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['drfbasico-1.onrender.com',
+                 'drfbasico.onrender.com',] # Agrega el dominio de tu aplicación en Render aquí
 
 
 # Application definition
